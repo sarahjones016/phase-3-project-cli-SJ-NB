@@ -14,4 +14,5 @@ if __name__ == '__main__':
         ''')
     
     # Create a new fan instance, for the person using our CLI application
-    create_new_fan()
+    welcome_new_fan = create_new_fan()
+    print(welcome_new_fan)
