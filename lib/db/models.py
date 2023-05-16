@@ -46,6 +46,7 @@ class Genre(Base):
     __table_args__ = (PrimaryKeyConstraint('id'), )
 
     id = Column(Integer())
+    name = Column(String())
     avg_bpm = Column(Integer())
     style = Column(String())
     prodominent_instrument = Column(String())
@@ -53,6 +54,7 @@ class Genre(Base):
 
 def __repr__(self):
     return f"ID: {self.id}," + \
+    f"Name: {self.name}" + \
     f"Average BPM: {self.average_bpm}" + \
     f"Style: {self.style}" + \
     f"Prodominent Instrument: {self.prodominent_instrument}" + \
