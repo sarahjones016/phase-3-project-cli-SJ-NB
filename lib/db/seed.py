@@ -76,8 +76,30 @@ if __name__ == '__main__':
 
    session.commit()
 
-   genres.append(showtunes, glam_rock, k_pop, punk_jazz, swing, ska, jungle, psychedelic_trance, disco, acid_breaks, house, uplifting_trance, r_and_b, waltz, reggae, bluegrass, blues, smooth_jazz, hip_hop, ambient_music, lofi_hip_hop, glitch_hop, dubstep, downtempo)
-
+   genres.append(showtunes)
+   genres.append(glam_rock)
+   genres.append(k_pop)
+   genres.append(punk_jazz)
+   genres.append(swing)
+   genres.append(ska)
+   genres.append(jungle)
+   genres.append(psychedelic_trance)
+   genres.append(disco)
+   genres.append(acid_breaks)
+   genres.append(house)
+   genres.append(uplifting_trance)
+   genres.append(r_and_b)
+   genres.append(waltz)
+   genres.append(reggae)
+   genres.append(bluegrass)
+   genres.append(blues)
+   genres.append(smooth_jazz)
+   genres.append(hip_hop)
+   genres.append(ambient_music)
+   genres.append(lofi_hip_hop)
+   genres.append(glitch_hop)
+   genres.append(dubstep)
+   genres.append(downtempo)
 
    # Fan Table
    fans = []
@@ -93,7 +115,7 @@ if __name__ == '__main__':
    # Review Table
    reviews = []
    for fan in fans:
-       for i in range(12):
+       for i in range(3):
         # create reviews that are associated with fans AND ALSO genres
         review = Review(
            star_rating=random.randint(1, 5),
@@ -101,10 +123,8 @@ if __name__ == '__main__':
            genre_id=random.choice(genres).id
         )
         reviews.append(review)
-        session.bulk_save_objects(reviews)
+        session.add(review)
            
-
-
 
    session.commit()
    session.close()
