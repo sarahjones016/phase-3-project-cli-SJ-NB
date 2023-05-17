@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from helpers import (assign_genre, create_fan, create_review, average_review, final_option, Colors)
+from helpers import (assign_genre, create_fan, create_review, average_review, Colors)
 
 engine = create_engine('sqlite:///genre_app.db')
 session = sessionmaker(bind=engine)()
@@ -26,18 +26,28 @@ Welcome to...
 
         ''')
     
-    # Create a new fan instance, for the person using our CLI application
-    create_fan()
+    game_running = True
+    while game_running:
+        # Create a new fan instance, for the person using our CLI application
+        create_fan()
 
+        # Run the 4 question quiz that the user interacts with
+        assign_genre()
 
-    # Run the 4 question quiz that the user interacts with
-    assign_genre()
+        # Create a new review instance. This takes the new fan's id and the id of they genre they've be assigned
+        create_review()
 
-    # Create a new review instance. This takes the new fan's id and the id of they genre they've be assigned
-    create_review()
+        # Pull the average star rating for the genre the new fan just reviewed
+        average_review()
 
-    # Pull the average star rating for the genre the new fan just reviewed
-    average_review()
-
-    final_option()
+        last_choice = input('''
+        Thank you for using the Music Genre Quiz! Enter 1 to QUIT or 2 to PLAY AGAIN: ''')
+        if last_choice == "1":
+            print('''
+            
+        All done!
+            ''')
+            game_running = False
+        else:
+            game_running = True
 
