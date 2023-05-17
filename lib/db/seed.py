@@ -25,7 +25,7 @@ if __name__ == '__main__':
    # Genre Table
    genres = []
    showtunes = Genre(name="Showtunes", avg_bpm=117, style="Instrumental", prodominent_instrument="Piano", commonly_known="Yes")
-   glam_rock = Genre(name="Glam Rock ", avg_bpm=125, style="Instrumental", prodominent_instrument="Piano", commonly_known="No")
+   glam_rock = Genre(name="Glam Rock", avg_bpm=125, style="Instrumental", prodominent_instrument="Piano", commonly_known="No")
    k_pop = Genre(name="K-pop", avg_bpm=175, style="Instrumental", prodominent_instrument="Guitar", commonly_known="Yes")
    punk_jazz = Genre(name="Punk Jazz", avg_bpm=125, style="Instrumental", prodominent_instrument="Guitar", commonly_known="No")
    swing = Genre(name="Swing", avg_bpm=132, style="Instrumental", prodominent_instrument="Drums", commonly_known="Yes")
@@ -35,7 +35,7 @@ if __name__ == '__main__':
    disco = Genre(name="Disco", avg_bpm=120, style="Electronic", prodominent_instrument="Guitar", commonly_known="Yes")
    acid_breaks = Genre(name="Acid Breaks", avg_bpm=135, style="Electronic", prodominent_instrument="Guitar", commonly_known="No")
    house = Genre(name="House", avg_bpm=135, style="Electronic", prodominent_instrument="Drums", commonly_known="Yes")
-   uplifting_trance = Genre(name="Uplifting Trace", avg_bpm=136, style="Electronic", prodominent_instrument="Drums", commonly_known="No")
+   uplifting_trance = Genre(name="Uplifting Trance", avg_bpm=136, style="Electronic", prodominent_instrument="Drums", commonly_known="No")
    r_and_b = Genre(name="R&B", avg_bpm=70, style="Instrumental", prodominent_instrument="Piano", commonly_known="Yes")
    waltz = Genre(name="Waltz", avg_bpm=87, style="Instrumental", prodominent_instrument="Piano", commonly_known="No")
    reggae = Genre(name="Reggae", avg_bpm=75, style="Instrumental", prodominent_instrument="Guitar", commonly_known="Yes")

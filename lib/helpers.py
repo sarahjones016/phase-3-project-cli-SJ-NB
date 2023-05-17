@@ -1,4 +1,6 @@
-from db.models import Fan, Genre
+from playsound import playsound
+
+from db.models import Genre
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -14,45 +16,53 @@ def assign_genre():
 
     ''')
     speed_options = ["1", "2"]
-    speed = input("Enter 1 for CHILL or 2 for DANCE: ")
+    speed = input('''
+        Enter 1 for CHILL or 2 for DANCE: ''')
     while speed not in speed_options:
-        speed = input("Please try again. Enter 1 for DANCE or 2 for CHILL: ")
+        speed = input('''
+        Please try again. Enter 1 for DANCE or 2 for CHILL: ''')
 
     if speed == "1":
         speed = 0
     else:
         speed = 106
-    print("Thanks for answering - next question!")
-    # print(f"INTERNAL STATUS OF SPEED: {speed}")
+    print('''
+        Thanks for answering - next question!
+        ''')
 
     # QUESTION 2
     print('''
 
-        Question 2: Music comes in ALL different sounds! Do you prefer those sounds be more instrumental or more electronic?
+        Question 2: Music can be composed using all different types of sounds! Do you prefer sounds be more instrumental or electronic?
         
     ''')
     style_options = ["1", "2"]
-    style = input("Enter 1 for INSTRUMENTAL or 2 for ELECTRONIC: ")
+    style = input('''
+        Enter 1 for INSTRUMENTAL or 2 for ELECTRONIC: ''')
     while style not in style_options:
-        style = input("Please try again, Enter 1 for INSTRUMENTAL or 2 for ELECTRONIC: ")
+        style = input('''
+        Please try again, Enter 1 for INSTRUMENTAL or 2 for ELECTRONIC: ''')
 
     if style == "1":
         style = "Instrumental"
     else:
         style = "Electronic"
-    print("Thanks for answering - next question!")
-    # print(f"INTERNAL STATUS OF STYLE: {style}")
+    print('''
+        Thanks for answering - next question!
+        ''')
 
     # QUESTION 3
     print('''
 
-        Question 3: If you could wake up tomorrow knowing how to play a new instrument, which would it be?
+        Question 3: If you could wake up tomorrow knowing how to play a new instrument, which instrument would it be?
         
     ''')
     instrument_options = ["1", "2", "3"]
-    instrument = input("Enter 1 for PIANO, 2 for GUITAR, or 3 for DRUMS: ")
+    instrument = input('''
+        Enter 1 for PIANO, 2 for GUITAR, or 3 for DRUMS: ''')
     while instrument not in instrument_options:
-        instrument = input("Please try again. Enter 1 for PIANO, 2 for GUITAR, or 3 for DRUMS: ")
+        instrument = input('''
+        Please try again. Enter 1 for PIANO, 2 for GUITAR, or 3 for DRUMS: ''')
 
     if instrument == "1":
         instrument = "Piano"
@@ -60,26 +70,30 @@ def assign_genre():
         instrument = "Guitar"
     else:
         instrument = "Drums"
-    print("Thanks for answering - next question!")
-    # print(f"INTERNAL STATUS OF INSTRUMENT: {instrument}")
+    print('''
+        Thanks for answering - one more question!
+        ''')
 
     # Question 4
     print('''
 
-        Question 4: Do you typically follow trends or stray from the mainstream?
+        Question 4: Do you typically follow trends or make trends?
         
     ''')
     commonly_known_options = ["1", "2"]
-    commonly_known = input("Enter 1 for TREND FOLLOWER or 2 for TREND SETTER: ")
+    commonly_known = input('''
+        Enter 1 for TREND FOLLOWER or 2 for TREND SETTER: ''')
     while commonly_known not in commonly_known_options:
-        commonly_known = input("Please try again. Enter 1 for TREND FOLLOWER or 2 for TREND SETTER: ")
+        commonly_known = input('''
+        Please try again. Enter 1 for TREND FOLLOWER or 2 for TREND SETTER: ''')
 
     if commonly_known == "1":
         commonly_known = "Yes"
     else:
         commonly_known = "No"
-    print("Thanks for answering - that was the last question!")
-    # print(f"INTERNAL STATUS OF COMMONLY KNOW: {commonly_known}")
+    print('''
+        Thanks for answering - that was the last question!
+        ''')
 
 
     # FILTER
@@ -95,6 +109,9 @@ def assign_genre():
     for genre in genres:
         print(f'''
 
-            You got.... {genre.name}!!!!
+        You should listen to more.... {genre.name} music!!!!
 
         ''')
+
+    genre_name = genre.name.lower().replace(" ", "_")
+    playsound(f"/Users/sarahjones/Desktop/Audio/{genre_name}.mp3")
