@@ -7,7 +7,7 @@ engine = create_engine('sqlite:///genre_app.db')
 session = sessionmaker(bind=engine)()
 
 if __name__ == '__main__':
-    print(f'''
+    print(Colors.cyan, f'''
     
 Welcome to...
     ''')
