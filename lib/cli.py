@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from helpers import (assign_genre)
+from helpers import (assign_genre, create_fan)
 from db.models import Fan
 
 engine = create_engine('sqlite:///genre_app.db')
@@ -28,18 +28,11 @@ Welcome to...
         ''')
     
     # Create a new fan instance, for the person using our CLI application
-    print("Let's get started!")
-    first_name = input("Enter your first name: ")
-    last_name = input("Enter your last name: ")
-    new_fan = Fan(first_name=first_name, last_name=last_name)
-    session.add(new_fan)
-    print(f'''
-    
-    Hey {new_fan.first_name} {new_fan.last_name}! We'll ask you some quick questions to help you find a new music genre.
-    ''')
-    session.commit()
+    create_fan()
 
 
     # Run the 4 question quiz that the user interacts with
     assign_genre()
+
+    # Create a new review instance. This takes the new fan's id and the id of they genre they've be assigned
 
