@@ -43,6 +43,7 @@ class Colors:
 # Create a new fan instance, for the person using our CLI application
 def create_fan():
     print(Colors.cyan, '''
+
     Let's get started!''')
     first_name = input('''
     Enter your first name: ''')
@@ -195,9 +196,7 @@ def assign_genre():
 
     # Play Audio
     genre_name = genre.name.lower().replace(" ", "_")
-    playsound(f"/Users/sarahjones/Desktop/Audio/{genre_name}.mp3")
-    # Look into additional way to play audio that doesn't require a computer specific path
-
+    playsound(f"lib/Audio/{genre_name}.mp3")
 
 # Create a new review instance. This takes the new fan's id and the id of they genre they've be assigned
 def create_review():
