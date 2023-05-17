@@ -1,8 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from helpers import (assign_genre, create_fan)
-from db.models import Fan
+from helpers import (assign_genre, create_fan, create_review, average_review, final_option, Colors)
 
 engine = create_engine('sqlite:///genre_app.db')
 session = sessionmaker(bind=engine)()
@@ -35,4 +34,10 @@ Welcome to...
     assign_genre()
 
     # Create a new review instance. This takes the new fan's id and the id of they genre they've be assigned
+    create_review()
+
+    # Pull the average star rating for the genre the new fan just reviewed
+    average_review()
+
+    final_option()
 
