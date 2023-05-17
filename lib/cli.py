@@ -40,8 +40,14 @@ Welcome to...
         # Pull the average star rating for the genre the new fan just reviewed
         average_review()
 
+        choice_options = ["1", "2"]
         last_choice = input('''
         Thank you for using the Music Genre Quiz! Enter 1 to QUIT or 2 to PLAY AGAIN: ''')
+
+        while last_choice not in choice_options:
+            last_choice = input('''
+        Enter 1 to QUIT or 2 to PLAY AGAIN: ''')
+            
         if last_choice == "1":
             print('''
             
