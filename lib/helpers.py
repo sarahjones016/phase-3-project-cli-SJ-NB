@@ -209,7 +209,7 @@ def create_review():
         Enter 1 - 5 to give the genre a star rating: ''')
     while star not in star_options:
         star = input('''
-        Please try again. Enter 1, 2, 3, 4, or 5 to give the genre a star rating:  ''')
+        Please try again. Enter 1, 2, 3, 4, or 5 to give the genre a star rating: ''')
     for genre in genres:
         new_review = Review(star_rating=star, fan_id=new_fan.id, genre_id=genre.id)
         session.add(new_review)
