@@ -71,7 +71,7 @@ def assign_genre():
         Enter 1 for CHILL or 2 for DANCE: ''')
     while speed not in speed_options:
         speed = input('''
-        Please try again. Enter 1 for DANCE or 2 for CHILL: ''')
+        Please try again. Enter 1 for CHILL or 2 for DANCE: ''')
 
     if speed == "1":
         speed = 0
