@@ -10,7 +10,7 @@ Are you in the mood for a new music genre but don't know where to start? We got 
 This CLI application makes use of SQLAlchemy, Alembic, Python fundamentals, and Playsound. It can be executed via command line with
 
 ```shell
- python lib/cli.py.
+ python lib/cli.py
 ```
 
 The 3 tables in the database (genre_app.db) can be seeded using the following command: 
