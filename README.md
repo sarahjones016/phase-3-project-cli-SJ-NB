@@ -5,6 +5,8 @@ Are you in the mood for a new music genre but don't know where to start? We got 
 
 ## Demo
 
+![ClI Music Genre Quiz Demo](assets/MusicGenre_CLI.mov)
+
 ## Getting Started
 
 This CLI application makes use of SQLAlchemy, Alembic, Python fundamentals, and Playsound. It can be executed via command line with
