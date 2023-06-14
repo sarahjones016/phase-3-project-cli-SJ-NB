@@ -5,7 +5,7 @@ Are you in the mood for a new music genre but don't know where to start? We got 
 
 ## Demo
 
-![ClI Music Genre Quiz Demo](assets/MusicGenre_CLI.mov)
+![ClI Music Genre Quiz Demo](assets/MusicGenre_CLIgif.gif)
 
 ## Getting Started
 
