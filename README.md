@@ -1,26 +1,44 @@
 # Music Genre Quiz 
 
-## Introduction
+## Project Description
+Are you in the mood for a new music genre but don't know where to start? We got you covered. Take this four question quiz and see what genre you should explore next!
 
-This CLI application makes use of SQLAlchemy, Alembic, Python fundamentals, and Playsound. It can be executed via command line with python lib/cli.py.
+## Demo
 
-The 3 tables in the database (genre_app.db) can be seeded using the following command: python lib/db/seed.py
+## Getting Started
 
-Playsound should be installed using the following command: pip install playsound. If you are using a Mac and receive an error about a missing AppKit package, run the following command: pip3 install PyObjC. This will form a bridge between Python and Objective-C on your Mac. 
+This CLI application makes use of SQLAlchemy, Alembic, Python fundamentals, and Playsound. It can be executed via command line with
 
-***
+```shell
+ python lib/cli.py.
+```
 
-## Goal
-The goal of this CLI application is to provide users with a new music genre that they should listen to.
+The 3 tables in the database (genre_app.db) can be seeded using the following command: 
 
-***
+````shell
+python lib/db/seed.py
+````
 
-## User Flow / App Explanation
+Playsound should be installed using the following command: 
 
+````shell
+pip install playsound
+````
+
+ If you are using a Mac and receive an error about a missing AppKit package, run the following command toform a bridge between Python and Objective-C on your Mac. : 
+ 
+ ```shell
+ pip3 install PyObjC.
+```
 
 ### Set Up
 
 This project utilizes three SQLAlchemy tables ("fans", "genres", and "reviews") that live within the genre_app database. The "fans" and "reviews" tables have been seeded with Faker data, while the "genres" table has been seeded manually with specific data that was collected for this project.
+
+***
+
+## The Build
+
 
 ### New Fan
 
