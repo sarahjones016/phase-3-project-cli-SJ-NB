@@ -3,6 +3,13 @@
 ## Project Description
 Are you in the mood for a new music genre but don't know where to start? We got you covered. Take this four question quiz and see what genre you should explore next!
 
+
+## Contributors 
+This project was completed in 4 days through a driver navigator programming style by two bootcamp students after only 1 week of learning Python and SQL
+
+    [Natasha Bartley] (https://github.com/natashabartley)
+    [Sarah Jones] (https://github.com/sarahjones016)
+
 ## Demo
 
 ![ClI Music Genre Quiz Demo](lib/assets/WelcomeScreen.png)
